@@ -2,7 +2,7 @@
 
 DROP TRIGGER IF EXISTS reset_email_validity
 
-DELIMITER &&
+DELIMITER |
 
 CREATE TRIGGER reset_email_validity
 BEFORE UPDATE ON users
@@ -12,6 +12,6 @@ BEGIN
 	THEN SET NEW.valid_email = 0;
 	END IF
 END; 
-&&
+|
 
 DELIMITER ;
