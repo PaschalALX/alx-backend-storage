@@ -1,16 +1,14 @@
 -- add bonus
 
-DROP PROCEDURE IF EXISTS addbonus;
+DROP PROCEDURE IF EXISTS AddBonus;
 
 DELIMITER &&
 
-CREATE PROCEDURE addbonus(
+CREATE PROCEDURE AddBonus(
 	IN user_id INT, 
 	IN project_name VARCHAR(255),
 	IN score  INT
 ) 
-COMMENT "add bonus"
-LANGUAGE SQL
 
 BEGIN
 	DECLARE project_id INT DEFAULT NULL;
