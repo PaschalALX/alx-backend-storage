@@ -1,6 +1,6 @@
 -- Reset Email Validity when changed
 
-DROP TRIGGER IF EXISTS reset_email_validity
+DROP TRIGGER IF EXISTS reset_email_validity;
 
 DELIMITER $$
 
