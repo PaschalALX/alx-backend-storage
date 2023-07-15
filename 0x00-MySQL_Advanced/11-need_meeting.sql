@@ -1,3 +1,5 @@
+-- Need meeting
+
 DROP VIEW IF EXISTS need_meeting; 
 
 CREATE VIEW need_meeting as SELECT name from students 
