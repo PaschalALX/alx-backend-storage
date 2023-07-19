@@ -6,6 +6,6 @@ def update_topics(mongo_collection, name, topics):
     """ changes all topics of a school document  """
 
     filter_query = {"name": name}
-    update_value = {"$set": {"topics": topic}}
+    new_values = {"$set": {"topics": topic}}
 
-    mongo_collection.update(filter_query, update_value)
+    mongo_collection.update_many(filter_query, new_values)
